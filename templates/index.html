@@ -1,0 +1,17 @@
+<h1>Home page</h1>
+<form action="/add", method="post">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="email" placeholder="email">
+    <input type="text" name="phone" placeholder="phone">
+    <button>Save</button>
+</form>
+
+<div>
+    {% for contacto in contactos %}
+    <div>
+        <h5>{{ contacto.name }}</h5>
+        <p>{{ contacto.email }}</p>
+        <p>{{ contacto.phone }}</p>
+    </div>
+    {% endfor %}
+</div>
